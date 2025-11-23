@@ -1,9 +1,16 @@
-Model:     FPVDM_with_top 
-Process:   p,p->Tp,tp
+Model:         FPVDM_with_top 
+Model changed: False
+Gauge:         Unitary
+Process:p,p->Tp,tp
+
 Composite: p=u,U,d,D,s,S,c,C,b,B,G
 
-pdf1:PDT:NNPDF40_lo_as_01180(proton)
-pdf2:PDT:NNPDF40_lo_as_01180(proton)
+pdf1:   PDT:NNPDF40_lo_as_01180(proton)
+pdf2:   PDT:NNPDF40_lo_as_01180(proton)
+
+#cteq6l1(proton)
+#cteq6l1(proton)
+
 p1:        6800
 p2:        6800
 
@@ -13,26 +20,38 @@ Parameter: gD=1
 Parameter: sinTs=1E-6
 
 Run parameter: Mtp
-Run begin:     1000
+Run begin:     1200
 Run step size: 100
-Run n steps:   11
+#Run n steps:   1
+Run n steps:   12
 
 Run parameter: DMV
-Run begin:     100
-Run step size: 100
-Run n steps:   7
+Run begin:     0.025
+Run step size: 0.1
+Run n steps:   10
 
 Run parameter: DM
 Run begin:     10
 Run step size: 0
 Run n steps:   1
 
-Parameter: MV=Mtp-DMV
+
+Parameter: MV=Mtp*(1-DMV)
 Parameter: MtD=Mtp-DM
+
+
+
+
 
 alpha Q :  Mtp
 
 Number of events (per run step): 10000
-Filename:        pp_TpTp_FPVDM_example
+Filename:           pp_TpTp_FPVDM_new
+
+
 Max number of nodes:   8
 Max number of processes per node: 1
+
+
+
+
