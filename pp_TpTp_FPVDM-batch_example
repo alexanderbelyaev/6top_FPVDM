@@ -1,12 +1,11 @@
 Model:     FPVDM_with_top 
-
 Process:   p,p->Tp,tp
 Composite: p=u,U,d,D,s,S,c,C,b,B,G
 
-pdf1:   PDT:NNPDF40_lo_as_01180(proton)
-pdf2:   PDT:NNPDF40_lo_as_01180(proton)
-p1:     6800
-p2:     6800
+pdf1:PDT:NNPDF40_lo_as_01180(proton)
+pdf2:PDT:NNPDF40_lo_as_01180(proton)
+p1:        6800
+p2:        6800
 
 Parameter: Mh2=10
 Parameter: MtD=1000
@@ -23,20 +22,17 @@ Run begin:     100
 Run step size: 100
 Run n steps:   7
 
-Parameter: DM
+Run parameter: DM
+Run begin:     10
+Run step size: 0
+Run n steps:   1
 
 Parameter: MV=Mtp-DMV
 Parameter: MtD=Mtp-DM
 
-
 alpha Q :  Mtp
 
 Number of events (per run step): 10000
-Filename:               pp_TpTp_FPVDM_example
-
+Filename:        pp_TpTp_FPVDM_example
 Max number of nodes:   8
 Max number of processes per node: 1
-
-
-
-
