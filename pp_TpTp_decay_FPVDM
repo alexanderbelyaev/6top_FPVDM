@@ -1,0 +1,53 @@
+Model:         FPVDM_with_top 
+Process:p,p->Tp,tp
+Decay:  F->2*x
+Decay:  V0->2*x
+
+Composite: p=u,U,d,D,s,S,c,C,b,B,G
+Composite: F=Tp,tp
+
+pdf1:   PDT:NNPDF40_lo_as_01180(proton)
+pdf2:   PDT:NNPDF40_lo_as_01180(proton)
+
+#cteq6l1(proton)
+#cteq6l1(proton)
+
+p1:        6800
+p2:        6800
+
+Parameter: Mh2=10
+Parameter: MtD=1490
+Parameter: gD=0.1
+Parameter: sinTs=1E-6
+
+Run parameter: Mtp
+Run begin:     1500
+Run step size: 100
+Run n steps:   1
+
+Run parameter: MV
+Run begin:     100
+Run step size: 400
+Run n steps:   3
+
+Run parameter: DM
+Run begin:     10
+Run step size: 0
+Run n steps:   1
+
+alpha Q :  Mtp
+
+Number of events (per run step): 100000
+Filename:      pp_TpTp_decay_FPVDM_100k
+
+
+Max number of nodes:   8
+Max number of processes per node: 1
+nSess_1:   5
+nCalls_1:  100000
+nSess_2:   5
+nCalls_2:  100000
+
+
+
+
