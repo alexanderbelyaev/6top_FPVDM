@@ -1,0 +1,31 @@
+# This is a minimal working example
+# the complete info about analysis syntax is in tools/fritz/src/fritz/Fritz.cc
+
+[Parameters]
+Name: FPVDM_TOP
+Analyses:13tev 
+
+ #atlas_1709_04183,atlas_1706_03731,atlas_1908_03122,atlas_2004_14060,atlas_2101_01629,atlas_2211_08028,atlas_conf_2016_050,cms_1908_04722,cms_sus_19_005,cms_sus_16_025,cms_sus_16_048,atlas_conf_2015_082,atlas_conf_2016_076,atlas_conf_2016_096,atlas_1908_08215,atlas_2106_01676,atlas_2010_14293,atlas_2006_05880
+
+#13tev 
+#
+
+
+#atlas_conf_2016_096
+#atlas_1911_12606
+#SkipAnalyses: atlas_1911_12606
+#atlas13tev, cms13tev,13tev
+
+
+#SkipAnalysis: True
+#SkipEvaluation: True
+
+SkipParamCheck: True
+WriteDelphesEvents: True
+OutputExists: Overwrite
+
+
+#SRCombination: [["cms_sus_19_005", "low"], ["cms_sus_19_005", "high"]]
+
+[myprocess]
+Pythia8Card: pythia8card.in

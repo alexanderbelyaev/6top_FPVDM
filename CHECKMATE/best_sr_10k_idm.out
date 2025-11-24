@@ -1,0 +1,18 @@
+
+Final deduplicated list of idm (analysis, sr) pairs:
+          source_folder             analysis                    sr  rexpcons
+10   i2hdm_mh320_mhc240     atlas_2111_08372                   SR1  0.256370
+41   i2hdm_mh320_mhc300     atlas_2004_10894                 Cat12  0.135272
+80   i2hdm_mh325_mhc260       cms_1908_04722  B004_2-3j_0b_350_350  0.117021
+16   i2hdm_mh320_mhc250       cms_2107_13201                  A_01  0.116886
+71   i2hdm_mh325_mhc230       cms_2107_13201                  A_00  0.116514
+251  i2hdm_mh345_mhc310       cms_1908_04722     A01_2j_0b_600_600  0.112589
+134  i2hdm_mh330_mhc310       cms_2107_13201                  A_02  0.109534
+252  i2hdm_mh345_mhc310       cms_2107_13201                  A_03  0.095939
+63   i2hdm_mh320_mhc340       cms_2107_13201                  A_04  0.087490
+54   i2hdm_mh320_mhc320     atlas_2102_10874                  EM05  0.043614
+23   i2hdm_mh320_mhc260     atlas_2102_10874                  EM04  0.042940
+29   i2hdm_mh320_mhc270  atlas_conf_2017_060                   IM5  0.028268
+9    i2hdm_mh320_mhc230     atlas_2010_14293            SR-2j-2200  0.027174
+14   i2hdm_mh320_mhc240  atlas_conf_2017_060                   EM5  0.025215
+4    i2hdm_mh320_mhc220  atlas_conf_2017_060                   IM4  0.023913

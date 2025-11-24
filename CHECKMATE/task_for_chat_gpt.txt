@@ -1,0 +1,217 @@
+july 2025
+================
+
+I am in my bin3 folder in checkmate
+I have results in results folder, one level up,
+which has the following list of subfolders:
+
+/home/belyaev/packages/CHECKMATE/checkmate2/results/
+
+fpvdm_Mtp1000DMV100/  fpvdm_Mtp1300DMV100/  fpvdm_Mtp1600DMV100/  fpvdm_Mtp1900DMV100/ 
+fpvdm_Mtp1000DMV200/  fpvdm_Mtp1300DMV200/  fpvdm_Mtp1600DMV200/  fpvdm_Mtp1900DMV200/ 
+fpvdm_Mtp1000DMV300/  fpvdm_Mtp1300DMV300/  fpvdm_Mtp1600DMV300/  fpvdm_Mtp1900DMV300/ 
+fpvdm_Mtp1000DMV400/  fpvdm_Mtp1300DMV400/  fpvdm_Mtp1600DMV400/  fpvdm_Mtp1900DMV400/ 
+fpvdm_Mtp1000DMV500/  fpvdm_Mtp1300DMV500/  fpvdm_Mtp1600DMV500/  fpvdm_Mtp1900DMV500/ 
+fpvdm_Mtp1000DMV600/  fpvdm_Mtp1300DMV600/  fpvdm_Mtp1600DMV600/  fpvdm_Mtp1900DMV600/ 
+fpvdm_Mtp1000DMV700/  fpvdm_Mtp1300DMV700/  fpvdm_Mtp1600DMV700/  fpvdm_Mtp1900DMV700/ 
+fpvdm_Mtp1100DMV100/  fpvdm_Mtp1400DMV100/  fpvdm_Mtp1700DMV100/  fpvdm_Mtp2000DMV100/
+fpvdm_Mtp1100DMV200/  fpvdm_Mtp1400DMV200/  fpvdm_Mtp1700DMV200/  fpvdm_Mtp2000DMV200/
+fpvdm_Mtp1100DMV300/  fpvdm_Mtp1400DMV300/  fpvdm_Mtp1700DMV300/  fpvdm_Mtp2000DMV300/
+fpvdm_Mtp1100DMV400/  fpvdm_Mtp1400DMV400/  fpvdm_Mtp1700DMV400/  fpvdm_Mtp2000DMV400/
+fpvdm_Mtp1100DMV500/  fpvdm_Mtp1400DMV500/  fpvdm_Mtp1700DMV500/  fpvdm_Mtp2000DMV500/
+fpvdm_Mtp1100DMV600/  fpvdm_Mtp1400DMV600/  fpvdm_Mtp1700DMV600/  fpvdm_Mtp2000DMV600/
+fpvdm_Mtp1100DMV700/  fpvdm_Mtp1400DMV700/  fpvdm_Mtp1700DMV700/  fpvdm_Mtp2000DMV700/
+fpvdm_Mtp1200DMV100/  fpvdm_Mtp1500DMV100/  fpvdm_Mtp1800DMV100/  
+fpvdm_Mtp1200DMV200/  fpvdm_Mtp1500DMV200/  fpvdm_Mtp1800DMV200/  
+fpvdm_Mtp1200DMV300/  fpvdm_Mtp1500DMV300/  fpvdm_Mtp1800DMV300/  
+fpvdm_Mtp1200DMV400/  fpvdm_Mtp1500DMV400/  fpvdm_Mtp1800DMV400/
+fpvdm_Mtp1200DMV500/  fpvdm_Mtp1500DMV500/  fpvdm_Mtp1800DMV500/
+fpvdm_Mtp1200DMV600/  fpvdm_Mtp1500DMV600/  fpvdm_Mtp1800DMV600/
+fpvdm_Mtp1200DMV700/  fpvdm_Mtp1500DMV700/  fpvdm_Mtp1800DMV700/
+
+
+
+I woul dlike to access and analyse some of them, namely
+fpvdm_Mtp*DMV*
+Mtp runs from 1000 to 2000 (11 times)
+DMV runs from 100  to 700 (7 times)
+77 folders in total.
+
+Each folder has evaluation/best_signal_regions.txt files
+The structure of best_signal_regions.txt can be learned from the one atatched.
+
+It has columnds:
+analysis - name of analysis;
+sr - name of the signal region;
+o - observed number of events;
+b - number of BG events;     
+db - uncertainty of  BG events;
+s - number  of signal events;
+ds  uncertainty of  signal  events;
+s95obs -- 95% CL on signal  for observed data;
+s95exp -- 95% CL on signal  for expected data;
+robscons -- r-value for observed data;
+rexpcons  -- r-value for expected data.
+
+I would like to work on this files.
+
+First of all I would like to read all   evaluation/best_signal_regions.txt files 
+and find the name of five  best analysis together with name of the signal region 
+which has the best (highest)  rexpcons ( five higest  rexpcons).
+
+Then I woul dlike to list these best analysis together with name  of the signal region
+-- all the best from each .txt file , but I do not want to see repeating names.  
+
+
+Slight correction: I need to implement the following strategy:
+find 5 best for EACH .txt (not overal) and then combine them
+and get as many as it comes, but without repetiion.
+
+
+I have got theese results
+
+Final deduplicated list of top (analysis, sr) pairs:
+           source_folder          analysis                     sr   rexpcons
+30   fpvdm_Mtp1000DMV700  atlas_2004_14060                 SRA-TT  13.020441
+
+26   fpvdm_Mtp1000DMV600  atlas_2211_08028               SR-Gtb-C   7.853887
+66   fpvdm_Mtp1100DMV700  atlas_2211_08028               SR-Gtb-M   6.371336
+31   fpvdm_Mtp1000DMV700  atlas_2211_08028               SR-Gbb-C   5.576999
+41   fpvdm_Mtp1100DMV200  atlas_2211_08028               SR-Gbb-M   2.152872
+161  fpvdm_Mtp1400DMV600  atlas_2211_08028               SR-Gtb-B   1.438776
+375  fpvdm_Mtp2000DMV700  atlas_2211_08028            SR-Gtt-0L-B   0.159923
+166  fpvdm_Mtp1400DMV700  atlas_2211_08028           SR-Gtt-1L-M1   1.733442
+
+29   fpvdm_Mtp1000DMV600  atlas_2106_09609                    SR4   3.462107
+
+134  fpvdm_Mtp1300DMV600  atlas_2101_01629           6J_btag_2100   0.922314
+199  fpvdm_Mtp1500DMV600  atlas_2101_01629           6J_btag_2800   0.389664
+
+189  fpvdm_Mtp1500DMV400  atlas_2010_14293               BDT-GGd2   0.256002
+264  fpvdm_Mtp1700DMV500  atlas_2010_14293               BDT-GGd1   0.141795
+369  fpvdm_Mtp2000DMV500  atlas_2010_14293             SR-4j-3400   0.047126
+34   fpvdm_Mtp1000DMV700  atlas_2010_14293               BDT-GGo3   3.709920
+
+52   fpvdm_Mtp1100DMV400    cms_sus_19_005               2b_loose   2.131022
+103  fpvdm_Mtp1200DMV700    cms_sus_19_005               3b_tight   2.626492
+22   fpvdm_Mtp1000DMV500    cms_sus_19_005               3b_loose   4.263917
+27   fpvdm_Mtp1000DMV600    cms_sus_19_005            7j_3b_loose   4.992418
+87   fpvdm_Mtp1200DMV400    cms_sus_19_005               2b_tight   1.652445
+
+32   fpvdm_Mtp1000DMV700    cms_1908_04722      A11_6j_1b_600_600   4.891599
+254  fpvdm_Mtp1700DMV300    cms_1908_04722  B090_6-7j_1b_850_1700   0.098200
+
+67   fpvdm_Mtp1100DMV700  atlas_1908_03122                   SRAH   3.633286
+59   fpvdm_Mtp1100DMV500  atlas_1908_03122                  SRC28   2.099853
+
+4    fpvdm_Mtp1000DMV400  atlas_1709_04183               SRD-high   2.683905
+
+
+Now the question -- very tricky one. If you need further help or input -- please let me know.
+What analysis are independent, so I can combine them statistically?
+
+
+=======================
+atlas_2211_08028
+cms_sus_19_005
+atlas_2010_14293
+atlas_1908_03122
+atlas_2101_01629
+cms_1908_04722
+atlas_1709_04183
+atlas_2106_09609
+atlas_2004_14060
+
+
+atlas -> 139fb^-1, CMS->137^-1
+===============================================
+
+
+SR to combine:
+atlas_2211_08028 : 139fb-1; 0 or 1lepton ; at least 3 b-jets
+SR-Gtb-C, SR-Gtb-M,SR-Gtb-B: all-hadronic final states (gluino to tb)
+SR-Gbb-C, SR-Gbb-M: all-hadronic final states (gluino to bb)
+SR-Gtt-0L-B:  all-hadronic final states (gluino to tt)
+SR-Gtt-1L-M1: 1 lepton  final states (gluino to tt)
+
+
+CMS SUS-19-005
+SRs are mutually exclusive by design because:
+CMS uses binning strategy: each event falls into exactly one bin in 
+the multidimensional space (Njets, Nb-tags, HT, MT2).
+These are combined in CMS global likelihood fits -- strong evidence of independence.
+Safe to combine all SRs within CMS SUS-19-005 
+(CheckMATE does this internally by taking max-likelihood).
+This is the easiest case.
+
+   2b_loose
+   3b_tight
+   3b_loose
+7j_3b_loose
+   2b_tight
+   
+
+ATLAS 2010.14293
+Many SRs are inclusive in terms of thresholds (e.g., meff > 2200 GeV includes meff > 2000 GeV).
+Events can pass multiple SRs -- nested structure.
+Cannot combine all SRs.
+
+ATLAS 1908.03122 -- overlapping SR sets; safest to use only the strongest individual SR
+
+
+ATLAS 2101.01629
+SRs are mutually exclusive by design (confirmed in text).
+Safe to combine all SRs.
+
+
+CMS 1908.04722
+CMS search with multi-jet + 1 b-tag categories.
+SRs defined for different jet multiplicities and HT bins.
+Strategy similar to CMS SUS-19-005-- likely exclusive.
+Need to check: The paper states -- binning strategy ensures orthogonality
+Status:
+Likely safe to combine all SRs 
+
+
+ATLAS 1709.04183
+Older ATLAS SUSY search (multi-jet).
+Based on past ATLAS practice (2017), 
+these SRs are not orthogonal.Use best SR only.
+
+ATLAS 2106.09609
+Search with machine-learning-based SRs.
+SR definitions partially overlap (NN score bins).
+ATLAS warns about overlap in text.
+Official combination uses correlation info (not public).
+Status:Cannot combine SRs.Use best SR only.
+
+
+ATLAS 2004.14060
+Stop search with three main SRs (different mass scenarios).
+These SRs are mutually exclusive by construction 
+(each scenario uses different lepton/jet/b-tag cuts).
+Verified in text: SRs defined to be orthogonal.
+
+================
+02/08/2025 2025
+
+
+based on my notes, lets implement this strategy: 1.Find Best CMS signal region, if there are additional orthogonal regions (see my notes) for this analysis (with significance of the same order) bring them for the combination; 2. Do the same for ATLAS 3. Combine all regions from Atlas and CMS. I think this sounds good. Now the question is -- we needa routine for the combination based on your nice routine "def compute_r_exp_cons_scaled(s0, ds0, b0, db0,lumi_factors)" Do not modify it, but write routine which would use it for this combination.
+
+
+
+let us work out the logic: 
+1. Step combine ATLAS: chose the best single  region for ATLAS OR  the best from combination of 
+ATLAS 2004.14060 regions 
+or 
+ATLAS 2101.01629 regions 
+or 
+atlas_2211_08028 (for this one can only combine one of the best 0-leptons(SR-Gtb-C, SR-Gtb-M,SR-Gtb-B, SR-Gbb-C, SR-Gbb-M, SR-Gtt-0L-B) and 1lepton (e.g SR-Gtt-1L-M1) regions  
+
+2. Do the same for CMS -- one chose  the best single  region for CMS or combination of 
+CMS SUS-19-005(all mutually exclusive) 
+or combination of 
+CMS 1908.04722(all exclusive)  
+
+3. Once the best ATLAS or CMS region (or combination) is found -- we can combine Those from ATLAS and CMS safely. Could you implement this logic,please?
+

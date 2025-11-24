@@ -1,0 +1,22 @@
+! Settings used in the main program.
+Main:numberOfEvents = 10000        ! number of events to generate
+Main:timesAllowErrors = 3          ! how many aborts before run stops
+
+Init:showChangedSettings = on      ! list changed settings
+Init:showChangedParticleData = on  ! list changed particle data
+Init:showOneParticleData = 36      ! print data for this particular particle
+Init:showOneParticleData = 35
+
+Next:numberCount = 500             ! print message every n events
+Next:numberShowInfo = 2            ! print event information n times
+Next:numberShowProcess = 2         ! print process record n times
+Next:numberShowEvent = 2           ! print event record n times
+LesHouches:setLifetime = 2         ! decay vertices are generated in the particle's rest frame, then boosted to the lab frame. 
+				   ! This is more accurate for displaced vertices
+
+SLHA:keepSM = off
+SLHA:minMassSM = 0.0
+Susy:all = off
+
+Beams:frameType = 4                ! use LHEF input
+Beams:LHEF = file.lhe.gz 

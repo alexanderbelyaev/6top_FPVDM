@@ -1,0 +1,77 @@
+atlas_2211_08028
+cms_sus_19_005
+atlas_2010_14293
+atlas_1908_03122
+atlas_2101_01629
+cms_1908_04722
+atlas_1709_04183
+atlas_2106_09609
+atlas_2004_14060
+
+
+atlas -> 139fb^-1, CMS->137^-1
+===============================================
+SR to combine:
+atlas_2211_08028 : 139fb-1; 0 or 1lepton ; at least 3 b-jets
+SR-Gtb-C, SR-Gtb-M,SR-Gtb-B: all-hadronic final states (gluino to tb)
+SR-Gbb-C, SR-Gbb-M: all-hadronic final states (gluino to bb)
+SR-Gtt-0L-B:  all-hadronic final states (gluino to tt)
+SR-Gtt-1L-M1: 1 lepton  final states (gluino to tt)
+
+
+CMS SUS-19-005
+SRs are mutually exclusive by design because:
+CMS uses binning strategy: each event falls into exactly one bin in 
+the multidimensional space (Njets, Nb-tags, HT, MT2).
+These are combined in CMS global likelihood fits -- strong evidence of independence.
+Safe to combine all SRs within CMS SUS-19-005 
+(CheckMATE does this internally by taking max-likelihood).
+This is the easiest case.
+
+   2b_loose
+   3b_tight
+   3b_loose
+7j_3b_loose
+   2b_tight
+   
+
+ATLAS 2010.14293
+Many SRs are inclusive in terms of thresholds (e.g., meff > 2200 GeV includes meff > 2000 GeV).
+Events can pass multiple SRs -- nested structure.
+Cannot combine all SRs.
+
+ATLAS 1908.03122 -- overlapping SR sets; safest to use only the strongest individual SR
+
+
+ATLAS 2101.01629
+SRs are mutually exclusive by design (confirmed in text).
+Safe to combine all SRs.
+
+
+CMS 1908.04722
+CMS search with multi-jet + 1 b-tag categories.
+SRs defined for different jet multiplicities and HT bins.
+Strategy similar to CMS SUS-19-005-- likely exclusive.
+Need to check: The paper states -- binning strategy ensures orthogonality
+Status:
+Likely safe to combine all SRs 
+
+
+ATLAS 1709.04183
+Older ATLAS SUSY search (multi-jet).
+Based on past ATLAS practice (2017), 
+these SRs are not orthogonal.Use best SR only.
+
+ATLAS 2106.09609
+Search with machine-learning-based SRs.
+SR definitions partially overlap (NN score bins).
+ATLAS warns about overlap in text.
+Official combination uses correlation info (not public).
+Status:Cannot combine SRs.Use best SR only.
+
+
+ATLAS 2004.14060
+Stop search with three main SRs (different mass scenarios).
+These SRs are mutually exclusive by construction 
+(each scenario uses different lepton/jet/b-tag cuts).
+Verified in text: SRs defined to be orthogonal.
