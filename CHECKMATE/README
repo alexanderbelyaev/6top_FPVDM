@@ -5,10 +5,10 @@ Set of files to get results for FPVDM 6top signatue using CheckMATE and the best
 
 1. python filter_relevant_signal_regions_adaptive.py  --> saves relevant region to filtered_regions/ for every point adaptively
 
-2.  
-    batch_process_filtered_all.py
-    batch_process_filtered_all_HL_LHC.py
-    
+2.  batch_combine_signal_regions.py
+    batch_combine_signal_regions_HL_LHC.py
+
+     
     they use 
     combine_signal_regions.py
 
